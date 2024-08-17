@@ -1,0 +1,20 @@
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Default: 2 cards per row */
+  gap: 5px;
+  max-width: 1200px; /* Maximum width for the card container */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 1024px) {
+  .card-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-list {
+    grid-template-columns: 1fr; /* 1 card per row for small screens */
+  }
+}
