@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const logger = require('./utils/logger')
 const { fromEnv } = require('./utils')
+const cardRoute = require('./routes/card-route')
 const connection = require('./config/db')
 const app = express()
 
@@ -21,6 +22,7 @@ app.use((req, res, next) => {
     });
     next();
 });
+app.use('/api/cards',cardRoute);
 
 
 app.get("/ping", (req, res) => {
