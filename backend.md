@@ -1,4 +1,37 @@
-### Assignment Description:
+# Help Center Backend API
+
+This repository contains the backend API for the Help Center application, built using Node.js, Express.js, and MongoDB. This API allows users to manage Help Center cards, including adding, updating, retrieving, and deleting help center topics.
+
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Environment Variables](#environment-variables)
+- [Running the Application](#running-the-application)
+- [API Endpoints](#api-endpoints)
+- [Folder Structure](#folder-structure)
+
+
+
+## Getting Started
+
+These instructions will help you set up the project on your local machine for development and testing purposes.
+
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/your-username/help-center-backend.git
+   cd backend
+   npm install 
+   npm run start
+
+
+
+<!-- ### Assignment Description:
 
 **Title:** Build a Help Center API
 
@@ -31,4 +64,4 @@ The objective of this assignment is to create a RESTful API that allows users to
 
 ### Submission:
 - Provide the source code in a GitHub repository and on the submission of the form, paste the github link.
-- Include a README file with instructions on how to set up and run the project locally.
+- Include a README file with instructions on how to set up and run the project locally. -->

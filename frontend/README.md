@@ -1,20 +1,3 @@
-## React Assignment
-
-### 1. How can you implement shared functionality across a component tree?
-Implementing shared functionality across a component tree in a React application can be achieved using several approaches, depending on the scope and nature of the functionality. Below are some common methods:
-
-1. Using React Context API
-2. Higher-Order Components (HOCs)
-3. Custom Hooks
-4. Render Props
-5. Lifting State Up
-
-### 2. Why is the `useState` hook appropriate for handling state in a complex component?
-The useState hook is ideal for handling state in complex components because it provides a simple and direct way to manage local state within functional components, allowing for fine-grained control over individual state variables. It enables components to store and update values over time, react to user interactions, and maintain a clean separation of concerns by keeping state management logic localized. Additionally, useState ensures that state changes trigger re-renders, keeping the UI in sync with the underlying data, which is crucial for managing dynamic and complex interactions within a component.
-
-### 3. Design a user interface resembling the provided page. Fetch the data from the server and dynamically map the information cards to the fetched data. Ensure that the search functionality is also implemented.
-
-![Logo](UI-Screen-1.png)
 
 # Abstract Help Center - Frontend
 
@@ -57,7 +40,7 @@ This project is a frontend implementation of the Abstract Help Center interface 
 
 ## Installation
 
-### Pre-requisites
+### Prerequisites
 
 - Node.js and npm installed on your machine.
 - Basic understanding of React.js and Tailwind CSS.
