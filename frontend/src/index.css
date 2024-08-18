@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::root,
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+
+
+li{
+    @apply hover:underline  list-none
+}
+h6{
+    @apply text-2xl font-bold
+}
