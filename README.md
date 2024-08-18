@@ -1,4 +1,16 @@
 # Help Center API Assignment
+**notes** :
+First clone repo.
+then,
+to start backend server : 
+1st step:- cd backend
+2nd step:- npm i
+3nd step:- npm run server         
+
+to start frontend server : 
+1st step:- cd frontend
+2nd step:- npm i
+3rd step:- npm run dev    
 
 ## Instructions
 
