@@ -40,7 +40,7 @@ function CardController() {
             } catch (error) { return res.status(500).json({ success: false, msg: error?.message }) }
         },
 
-        //--------//Fetch a new card by title, 'GET /cards/:title'
+        //--------Fetch a new card by title, 'GET /cards/:title'
 
         async fetch_card(req, res) {
             try {
@@ -52,6 +52,29 @@ function CardController() {
                 const isCardExist = await CardModel.findOne({ title });
 
                 if (!isCardExist) return res.status(500).json({ success: false, msg: "Card not found" });
+
+                return res.status(201).json({ success: true, msg: "Fetch card details successfully", card: isCardExist });
+
+
+            } catch (error) { return res.status(500).json({ success: false, msg: error?.message }) }
+        },
+        //--------Searching the card data, 'GET /search'
+
+        async search_card(req, res) {
+            try {
+                let { q } = req.query;
+                if (!q) return res.status(400).json({ success: false, msg: "Query is required to search card" });
+
+                q = q.toLowerCase();
+
+                const isCardExist = await CardModel.find({
+                    $or: [
+                        { title: { $regex: q, $options: 'i' } },  // Case-insensitive search on title
+                        { description: { $regex: q, $options: 'i' } }  // Case-insensitive search on description
+                      ]
+                })
+
+                if (!isCardExist || isCardExist.length == 0) return res.status(500).json({ success: false, msg: "Card not found" });
 
                 return res.status(201).json({ success: true, msg: "Fetch card details successfully", card: isCardExist });
 
