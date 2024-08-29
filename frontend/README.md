@@ -1,8 +1,40 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Frontend
+```
+frontend/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Card.jsx
+│   │   ├── CardList.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── RequestForm.jsx
+│   │   └── SearchBar.jsx
+│   ├── hooks/
+│   │   └── useCards.js
+│   ├── services/
+│   │   └── api.js
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.js
+├── .gitignore
+├── README.md
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+└── vite.config.js
+```
 
-Currently, two official plugins are available:
+The frontend is built with React and uses Vite as the build tool. It includes components, custom hooks, and services for API communication.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Available Scripts
+
+In the frontend directory:
+- `npm run dev`: Starts the development server
+- `npm run build`: Builds the app for production
+- `npm run lint`: Runs ESLint
+- `npm run preview`: Previews the build locally
