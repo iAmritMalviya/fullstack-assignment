@@ -37,14 +37,16 @@ This is the solution of below assessment. In which I am creating the a full-stac
 5. **Submit Your Work:**
    - Paste the GitHub repository link in the Google form you received after pushing your code.
 
+<a href="#help_center">Go Home </a>
+
 ## <h2 id="demo" >Demo </h2>
 
 
 <p text-align=left>
-  <img src="" width="500" height="" alt="help_center_home"/>
-    
-    
-  <img src="" width="500" height="" alt="help_center_download"/>  
+  <img src="https://github.com/user-attachments/assets/fb92d2dd-ec39-4431-935a-37c84d9655fd" width="500" height="" alt="help_center_home"/>
+
+https://github.com/user-attachments/assets/49208244-ffc7-432c-9d08-95857b9d9fc3
+
  </p>
  
 
@@ -57,7 +59,9 @@ This is the solution of below assessment. In which I am creating the a full-stac
 
 
 **Server:** ReactJS, Chakra UI 
-**Server:** NodeJS, ExpressJS,
+
+**Server:** NodeJS, ExpressJS
+
 **Database:** MongoDB 
 
 <a href="#help_center">Go Home </a>
@@ -65,8 +69,9 @@ This is the solution of below assessment. In which I am creating the a full-stac
 
 ## <h2 id="env">Environment Variables </h2>
 
-To want more info go on **.env.example** file in both folder (forntend and backend). 
-Rename file **.env.example** -> **.env** and Write your own environment variables. 
+To want more info go on `.env.example` file in both folders (frontend and backend). 
+
+Rename file `.env.example` -> `.env`and Write your own environment variables. 
 
 <a href="#help_center">Go Home </a>
 
@@ -82,17 +87,20 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd fullstack-assignment
+  cd full-stack-assignment
 ```
 
 #### Backend
+```bash
+  cd backend
+```
 
 Install dependencies
 
 ```bash
  yarn
 ```
-If yarn not in your system, can use *npm i* to install dependies
+If yarn is not in your system, can use *npm i* to install dependencies
 
 OR
 
@@ -102,10 +110,10 @@ npm i -g yarn
 yarn -v
 ```
 
-Start the server or can be use "npm run" command
+Start the server or use "npm run" command
 
 ```bash
-  yarn start (start at only time)
+  yarn start (start at the only time)
 
   yarn dev (Run or restart, whenever you save any file(js))
 ```
@@ -113,13 +121,16 @@ Start the server or can be use "npm run" command
 
 #### Frontend
 
+```bash
+  cd frontend
+```
 
 Install dependencies
 
 ```bash
  yarn
 ```
-If yarn not in your system, can use *npm i* to install dependies
+If yarn is not in your system, can use *npm i* to install dependencies
 
 OR
 
@@ -129,7 +140,7 @@ npm i -g yarn
 yarn -v
 ```
 
-Start the server or can be use "npm run" command
+Start the server or use "npm run" command
 
 ```bash
 
@@ -144,11 +155,13 @@ Start the server or can be use "npm run" command
 
 ## <h2 id="routersRef">Routers Reference </h2>
 
-To more info see *backend.md* file 
+For more info see `backend.md` file 
+
+<a href="#help_center">Go Home </a>
 
 ## <h2 id="features">Features </h2>
 
-Full-filling all requirements mentioned in *frontend.md* and *backend.md* 😄
+Full-filling all requirements mentioned in `frontend.md` and *backend.md* 😄
 
 
 <a href="#help_center">Go Home </a>
