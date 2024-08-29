@@ -1,6 +1,9 @@
 import axios from 'axios';
+import dotenv from 'dotenv';
 
-const API_URL = 'http://localhost:5000/api';
+
+// Access the API URL from environment variables
+const API_URL = import.meta.env.VITE_API_URL;
 
 // Fetch all cards
 export const fetchCards = async () => {
@@ -23,7 +26,6 @@ export const fetchCardByTitle = async (title) => {
         throw error;
     }
 };
-
 
 // Submit form data
 export const submitForm = async (formData) => {
