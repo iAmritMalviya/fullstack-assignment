@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Header from './Header'
 
-import { Box, Flex, Stack, Grid, Heading, Spinner, HStack } from '@chakra-ui/react'
+import { Box, Flex, Heading, Spinner, HStack } from '@chakra-ui/react'
 import HelpCard from '../../components/Layout/Card/HelpCard'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
-import ApiHanlderHook from '../../ApiHandlerHook'
 import toast from 'react-hot-toast'
-import ShareModal from '../../components/ShareModel'
 
 
 /*
