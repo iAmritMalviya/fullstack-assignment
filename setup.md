@@ -1,19 +1,14 @@
 ## 🚀 Deployment
 
-1. Clone the repository
 
-```bash
-  git clone 
-```
-
-2. Install dependencies
+1. Install dependencies
 
 ```bash
   npm install
 ```
 
-3. Set up environment variables
-4. Update the .env file with your configuration.
+2. Set up environment variables
+3. Update the .env file with your configuration.
 
 ## Environment Variables
 
