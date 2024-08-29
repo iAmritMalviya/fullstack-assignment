@@ -1,0 +1,41 @@
+.add-card-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.add-card-form input[type="text"],
+.add-card-form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.add-card-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.add-card-form button {
+    padding: 10px 20px;
+    background-color: #0f0f0f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.add-card-form button:disabled {
+    background-color: #6c757d;
+}
+
+.add-card-form .error {
+    color: red;
+    margin-top: 10px;
+}
