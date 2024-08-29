@@ -20,7 +20,7 @@
    - Push both the frontend and backend apps to the same repository.
    - The repository is public.
 
-5. **Submit Your Work:**
+5. **Submit My Work:**
    - Pasted the GitHub repository link in the Google form I've received after pushing my code.
 
 ---
