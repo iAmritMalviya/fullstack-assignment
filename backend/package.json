@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Creating the assessment solution where our focus to solve backend.md",
+  "main": "server",
+  "license": "MIT",
+  "scripts": {
+    "start" : "node server",
+    "dev" : "nodemon server -e js,ejs"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.4"
+  }
+}
