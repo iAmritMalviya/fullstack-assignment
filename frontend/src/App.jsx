@@ -2,13 +2,16 @@
 import React from 'react'
 import HomePage from './pages/Home/HomePage'
 
-import { Heading } from '@chakra-ui/react'
+import {Toaster} from 'react-hot-toast'
 
 function App() {
 
   return (
     <>
       <HomePage />
+
+      <Toaster />
+
     </>
   )
 }

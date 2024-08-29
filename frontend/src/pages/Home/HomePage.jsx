@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from './Header'
 
-import { Box, Flex, Stack ,Grid} from '@chakra-ui/react'
+import { Box, Flex, Stack, Grid, Heading, Spinner, HStack } from '@chakra-ui/react'
 import HelpCard from '../../components/Layout/Card/HelpCard'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
+import ApiHanlderHook from '../../ApiHandlerHook'
+import toast from 'react-hot-toast'
+import ShareModal from '../../components/ShareModel'
 
 
 /*
@@ -16,6 +19,53 @@ import Footer from '../../components/Footer'
 */
 
 const HomePage = () => {
+
+  const [cards, setCards] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const url = import.meta.env.VITE_APP_BACKEND_URL;
+
+  const FetchCards = async () => {
+    try {
+
+
+      setLoading(true);
+      const res = await fetch(`${url}/cards`);
+      const data = await res.json();
+
+      if (!data) {
+        setLoading(false);
+
+        toast.error(data?.msg || "Internal Server Error");
+        return;
+      }
+
+      if (data?.success === false) {
+        setLoading(false);
+
+        toast.error(data?.msg);
+        return;
+      }
+      setCards(data?.cards);
+    } catch (error) {
+      toast.error(error);
+
+    }
+    setLoading(false);
+
+
+  }
+
+
+  useEffect(() => {
+
+    FetchCards();
+
+  }, []);
+
+  //------------ States specific stuffs
+
+
   return (
     <>
       <Box minH={'100vh'}>
@@ -23,31 +73,30 @@ const HomePage = () => {
         <Navbar />
 
         <Box id="Header" bg={'#160C28'} py={'6%'} color={'white'}>
-          <Header />
+          <Header setCards={setCards} FetchCards={FetchCards} />
         </Box>
 
-        <Box id="Cards" w={['100%','80%']} mx={'auto'} p='5'>
-        <Flex
-      direction={{ base: "column", md: "row" }} // Stack vertically on small screens, horizontally on medium and above
-      wrap="wrap" // Enable wrapping of items
-      justify={['center','space-around']} // Center items horizontally
-      alignItems={'center'} // Center items vertically
-      gap={['2','4']} // Add space between the boxes
-    >
-          {/* <Stack direction={['column', 'row']} alignItems={'center'} justifyContent={'space-between'} wrap={'wrap'}> */}
-     
+        <Box id="Cards" w={['100%', '80%']} minH={'60vh'} mx={'auto'} p='5'>
+          <HStack alignItems={'center'} justifyContent={'center'} >
 
-            {/* <Stack direction={['column', 'row']} alignItems={'center'} justifyContent={'space-between'}> */}
-              <HelpCard />
-              <HelpCard />
-              <HelpCard />
-              <HelpCard />
-              <HelpCard />
-              <HelpCard />
-            {/* </Stack> */}
-    
-</Flex>
-          {/* </Stack> */}
+            {loading && <Spinner  />}
+          </HStack>
+          {!cards || cards?.length === 0 && loading === false && <Heading color={'red'} textAlign={'center'}>No Card Found</Heading>}
+
+          <Flex
+            direction={{ base: "column", md: "row" }}
+            wrap="wrap"
+            justify={['center', 'space-around']}
+            gap={['2', '4']}
+          >
+
+            {
+              cards?.map(card => {
+                return <HelpCard key={card?._id} title={card?.title} description={card?.description} link={card?.link} />
+              })
+            }
+
+          </Flex>
         </Box>
 
 
